@@ -11,7 +11,7 @@ try:
     api_key = st.secrets["GEMINI_API_KEY"]
     # ここがポイント：あえて古いバージョンを指定することでエラーを回避します
     genai.configure(api_key=api_key, transport='rest') 
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('models/gemini-1.5-flash')
 except Exception as e:
     st.error(f"設定エラー: {e}")
 
