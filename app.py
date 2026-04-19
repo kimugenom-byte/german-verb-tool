@@ -11,7 +11,7 @@ try:
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
     # どんな環境でも動きやすい最新の名称に変更
-    model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
+    model = genai.GenerativeModel('gemini-1.5-flash')
 except Exception as e:
     st.error(f"設定エラー: {e}")
 
